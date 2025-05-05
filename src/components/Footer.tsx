@@ -1,4 +1,3 @@
-import React from "react";
 import Container from "./Container";
 import { Heart } from "lucide-react";
 import { navLinks } from "../constants";

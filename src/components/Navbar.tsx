@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { navLinks } from "../constants";
 import Container from "./Container";
-
 import logo from "../assets/logo.png";
+
+import "./Navbar.css"; // Import your CSS file for styles
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,41 +24,20 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header
-      className={`fixed w-full z-50 transition-all duration-300 bg-white ${
-        scrolled ? "bg-white shadow-md py-3" : "bg-transparent py-5"
-      }`}
-    >
+    <header className={`navbar-header ${scrolled ? "scrolled" : "scrolled"}`}>
       <Container>
-        <nav className="flex items-center justify-between">
-          <a href="#home" className="flex items-center space-x-2">
-            {/* <div className="w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">BI</span>
-            </div>
-            <span className={`font-serif font-bold text-xl ${scrolled ? 'text-primary-800' : 'text-primary-800'}`}>
-              Bridge Inspire
-            </span> */}
-            <img src={logo} alt="Logo" className="h-20 w-30 rounded-full" />
-            {/* <span
-              className={`font-serif font-bold text-xl ${
-                scrolled ? "text-primary-800" : "text-primary-800"
-              }`}
-            >
-              Bridge Inspire
-            </span> */}
+        <nav className="navbar-nav">
+          <a href="#home" className="navbar-logo">
+            <img src={logo} alt="Logo" className="navbar-logo-img" />
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="navbar-desktop-links">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className={`font-medium transition-colors ${
-                  scrolled
-                    ? "text-gray-700 hover:text-primary-600"
-                    : "text-gray-700 hover:text-primary-600"
-                }`}
+                className={`navbar-link ${scrolled ? "scrolled" : ""}`}
               >
                 {link.name}
               </a>
@@ -66,7 +46,7 @@ const Navbar = () => {
 
           {/* Mobile Navigation Toggle */}
           <button
-            className="md:hidden text-gray-700 focus:outline-none"
+            className="navbar-mobile-toggle"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -75,13 +55,13 @@ const Navbar = () => {
 
         {/* Mobile Navigation Menu */}
         {isOpen && (
-          <div className="md:hidden bg-white absolute top-full left-0 w-full shadow-md py-4 px-6 animate-fade-in">
-            <div className="flex flex-col space-y-4">
+          <div className="navbar-mobile-menu">
+            <div className="navbar-mobile-links">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-gray-700 hover:text-primary-600 font-medium transition-colors"
+                  className="navbar-mobile-link"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}

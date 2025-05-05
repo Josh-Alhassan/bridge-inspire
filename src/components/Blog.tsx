@@ -1,8 +1,7 @@
-import React from 'react';
-import Container from './Container';
-import SectionTitle from './SectionTitle';
-import { blogPosts } from '../constants';
-import { Calendar, Clock, ChevronRight } from 'lucide-react';
+import Container from "./Container";
+import SectionTitle from "./SectionTitle";
+import { blogPosts } from "../constants";
+import { Calendar, Clock, ChevronRight } from "lucide-react";
 
 const Blog = () => {
   return (
@@ -13,10 +12,10 @@ const Blog = () => {
           subtitle="Stay updated with our latest news, success stories, and insights from our programs."
           center
         />
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post) => (
-            <article 
+            <article
               key={post.id}
               className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300"
             >
@@ -37,22 +36,20 @@ const Blog = () => {
                     {post.readTime}
                   </div>
                 </div>
-                
+
                 <h3 className="text-xl font-serif font-bold text-gray-900 mb-3 hover:text-primary-600 transition-colors">
                   <a href={`#blog/${post.id}`}>{post.title}</a>
                 </h3>
-                
-                <p className="text-gray-600 mb-4">
-                  {post.excerpt}
-                </p>
-                
+
+                <p className="text-gray-600 mb-4">{post.excerpt}</p>
+
                 <div className="flex items-center justify-between mt-6 pt-4 border-t border-gray-100">
                   <div className="flex items-center text-sm text-gray-500">
                     <Calendar size={14} className="mr-1" />
-                    {new Date(post.date).toLocaleDateString('en-US', {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric'
+                    {new Date(post.date).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
                     })}
                   </div>
                   <span className="text-sm font-medium text-gray-600">
@@ -63,7 +60,7 @@ const Blog = () => {
             </article>
           ))}
         </div>
-        
+
         <div className="mt-12 text-center">
           <a
             href="#blog/all"

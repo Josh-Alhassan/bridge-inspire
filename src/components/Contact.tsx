@@ -1,141 +1,156 @@
-import React from 'react';
-import Container from './Container';
-import SectionTitle from './SectionTitle';
-import Button from './Button';
-import { Mail, PhoneCall, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
-import { contactInfo } from '../constants';
+import Container from "./Container";
+import SectionTitle from "./SectionTitle";
+import Button from "./Button";
+import {
+  Mail,
+  PhoneCall,
+  MapPin,
+  Facebook,
+  Instagram,
+  Twitter,
+} from "lucide-react";
+import { contactInfo } from "../constants";
+import "./Contact.css";
 
 const Contact = () => {
   return (
-    <section id="contact" className="section-padding bg-secondary-50">
+    <section id="contact" className="contact-section">
       <Container>
         <SectionTitle
           title="Get in Touch"
           subtitle="Have questions or want to get involved? Reach out to us."
           center
         />
-        
-        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+
+        <div className="contact-grid">
           <div>
-            <div className="bg-white rounded-lg shadow-md p-8">
-              <h3 className="text-xl font-serif font-bold text-gray-900 mb-6">Send Us a Message</h3>
-              
-              <form className="space-y-6">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700">Your Name</label>
+            <div className="contact-card">
+              <h3 className="contact-title">Send Us a Message</h3>
+
+              <form className="contact-form">
+                <div className="form-group">
+                  <label htmlFor="name" className="form-label">
+                    Your Name
+                  </label>
                   <input
                     type="text"
                     id="name"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                    className="form-input"
                     placeholder="Enter your name"
                   />
                 </div>
-                
-                <div className="space-y-2">
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email Address</label>
+
+                <div className="form-group">
+                  <label htmlFor="email" className="form-label">
+                    Email Address
+                  </label>
                   <input
                     type="email"
                     id="email"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                    className="form-input"
                     placeholder="Enter your email"
                   />
                 </div>
-                
-                <div className="space-y-2">
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700">Subject</label>
-                  <select
-                    id="subject"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                  >
+
+                <div className="form-group">
+                  <label htmlFor="subject" className="form-label">
+                    Subject
+                  </label>
+                  <select id="subject" className="form-input">
                     <option value="">Select a subject</option>
                     <option value="donation">Donation Inquiry</option>
                     <option value="volunteer">Volunteering</option>
-                    <option value="partnership">Partnership Opportunities</option>
+                    <option value="partnership">
+                      Partnership Opportunities
+                    </option>
                     <option value="general">General Inquiry</option>
                   </select>
                 </div>
-                
-                <div className="space-y-2">
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
+
+                <div className="form-group">
+                  <label htmlFor="message" className="form-label">
+                    Message
+                  </label>
                   <textarea
                     id="message"
                     rows={5}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                    className="form-input form-textarea"
                     placeholder="Enter your message"
                   ></textarea>
                 </div>
-                
+
                 <Button variant="primary" type="submit" fullWidth>
                   Send Message
                 </Button>
               </form>
             </div>
           </div>
-          
-          <div className="space-y-8">
-            <div className="bg-white rounded-lg shadow-md p-8">
-              <h3 className="text-xl font-serif font-bold text-gray-900 mb-6">Contact Information</h3>
-              
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="bg-secondary-100 p-3 rounded-full mr-4">
-                    <Mail size={20} className="text-secondary-600" />
+
+          <div className="contact-info">
+            {/* <div className="contact-card">
+              <h3 className="contact-title">Contact Information</h3>
+
+              <div>
+                <div className="contact-info-item">
+                  <div className="contact-icon-wrapper">
+                    <Mail size={20} className="contact-icon" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-1">Email</h4>
-                    <p className="text-gray-700">{contactInfo.email}</p>
+                    <h4 className="contact-info-title">Email</h4>
+                    <p className="contact-info-text">{contactInfo.email}</p>
                   </div>
                 </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-secondary-100 p-3 rounded-full mr-4">
-                    <PhoneCall size={20} className="text-secondary-600" />
+
+                <div className="contact-info-item">
+                  <div className="contact-icon-wrapper">
+                    <PhoneCall size={20} className="contact-icon" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-1">Phone</h4>
-                    <p className="text-gray-700">{contactInfo.phone}</p>
+                    <h4 className="contact-info-title">Phone</h4>
+                    <p className="contact-info-text">{contactInfo.phone}</p>
                   </div>
                 </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-secondary-100 p-3 rounded-full mr-4">
-                    <MapPin size={20} className="text-secondary-600" />
+
+                <div className="contact-info-item">
+                  <div className="contact-icon-wrapper">
+                    <MapPin size={20} className="contact-icon" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-1">Location</h4>
-                    <p className="text-gray-700">{contactInfo.address}</p>
+                    <h4 className="contact-info-title">Location</h4>
+                    <p className="contact-info-text">{contactInfo.address}</p>
                   </div>
                 </div>
               </div>
-            </div>
-            
-            <div className="bg-white rounded-lg shadow-md p-8">
-              <h3 className="text-xl font-serif font-bold text-gray-900 mb-6">Connect With Us</h3>
-              
-              <div className="flex space-x-4">
-                <a href="#" className="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full transition-colors">
+            </div> */}
+
+            <div className="contact-card">
+              <h3 className="contact-title">Connect With Us</h3>
+
+              <div className="social-links">
+                <a href="#" className="social-link facebook">
                   <Facebook size={20} />
                 </a>
-                <a href="#" className="bg-pink-500 hover:bg-pink-600 text-white p-3 rounded-full transition-colors">
+                <a href="#" className="social-link instagram">
                   <Instagram size={20} />
                 </a>
-                <a href="#" className="bg-sky-500 hover:bg-sky-600 text-white p-3 rounded-full transition-colors">
+                <a href="#" className="social-link twitter">
                   <Twitter size={20} />
                 </a>
               </div>
-              
+
               <div className="mt-6">
-                <h4 className="font-medium text-gray-900 mb-3">Join Our Community</h4>
-                <p className="text-gray-700 mb-4">
-                  Subscribe to our newsletter to stay updated on our work and opportunities to get involved.
+                <h4 className="contact-info-title">Join Our Community</h4>
+                <p className="contact-info-text mb-4">
+                  Subscribe to our newsletter to stay updated on our work and
+                  opportunities to get involved.
                 </p>
-                <div className="flex">
+                <div className="newsletter-input-group">
                   <input
                     type="email"
-                    className="flex-grow px-4 py-2 border border-gray-300 rounded-l-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                    className="newsletter-input"
                     placeholder="Your email address"
                   />
-                  <Button className="rounded-l-none">Subscribe</Button>
+                  <Button className="newsletter-button">Subscribe</Button>
                 </div>
               </div>
             </div>
