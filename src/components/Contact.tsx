@@ -87,7 +87,7 @@ const Contact = () => {
           </div>
 
           <div className="contact-info">
-            {/* <div className="contact-card">
+            <div className="contact-card">
               <h3 className="contact-title">Contact Information</h3>
 
               <div>
@@ -97,7 +97,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="contact-info-title">Email</h4>
-                    <p className="contact-info-text">{contactInfo.email}</p>
+                    <p className="contact-info-text email-font">
+                      {contactInfo.email}
+                    </p>
                   </div>
                 </div>
 
@@ -121,7 +123,7 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-            </div> */}
+            </div>
 
             <div className="contact-card">
               <h3 className="contact-title">Connect With Us</h3>

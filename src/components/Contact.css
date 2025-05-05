@@ -96,6 +96,11 @@
   color: #374151;
 }
 
+.email-font {
+  font-size: 11px;
+  /* line-break: break-all; */
+}
+
 .social-links {
   display: flex;
   gap: 1rem;
