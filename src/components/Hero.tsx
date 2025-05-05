@@ -6,8 +6,10 @@ import Container from "./Container";
 import imgIndex1 from "../assets/junior-gyb.jpg";
 import imgIndex2 from "../assets/let-her-shine-audeince.jpeg";
 import imgIndex3 from "../assets/humaniterian-rights.jpg";
+import kqGirls from "../assets/kq-girls.jpeg";
+import teensForum from "../assets/teens-forum.jpg";
 
-const heroImages = [imgIndex1, imgIndex2, imgIndex3];
+const heroImages = [imgIndex1, imgIndex2, imgIndex3, kqGirls, teensForum];
 
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

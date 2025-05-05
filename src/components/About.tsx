@@ -1,7 +1,8 @@
-import React from 'react';
-import Container from './Container';
-import SectionTitle from './SectionTitle';
-import Button from './Button';
+import Container from "./Container";
+import SectionTitle from "./SectionTitle";
+import Button from "./Button";
+
+import girlsLearningCode from "../assets/girls-learning-2.jpg";
 
 const About = () => {
   return (
@@ -13,43 +14,60 @@ const About = () => {
               title="Who We Are"
               subtitle="The Bridge Inspire Foundation is a women-led nonprofit organization committed to creating positive change."
             />
-            
+
             <div className="space-y-6">
               <p className="text-gray-700">
-                We empower underserved communities—especially adolescent girls and women—through a multi-pronged approach of education, health, economic empowerment, leadership development, and humanitarian support.
+                We empower underserved communities—especially adolescent girls
+                and women—through a multi-pronged approach of education, health,
+                economic empowerment, leadership development, and humanitarian
+                support.
               </p>
-              
+
               <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-primary-600">
-                <h3 className="text-xl font-serif font-bold text-gray-900 mb-3">Our Vision</h3>
+                <h3 className="text-xl font-serif font-bold text-gray-900 mb-3">
+                  Our Vision
+                </h3>
                 <p className="text-gray-700">
-                  A society where every girl blossoms into a confident, capable, and compassionate leader, equipped to shape her own future and create positive change.
+                  A society where every girl blossoms into a confident, capable,
+                  and compassionate leader, equipped to shape her own future and
+                  create positive change.
                 </p>
               </div>
-              
+
               <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-accent-400">
-                <h3 className="text-xl font-serif font-bold text-gray-900 mb-3">Our Mission</h3>
+                <h3 className="text-xl font-serif font-bold text-gray-900 mb-3">
+                  Our Mission
+                </h3>
                 <p className="text-gray-700">
-                  To equip young women with the tools, opportunities, and voice to thrive through education, advocacy, leadership mentoring, and socio-economic empowerment.
+                  To equip young women with the tools, opportunities, and voice
+                  to thrive through education, advocacy, leadership mentoring,
+                  and socio-economic empowerment.
                 </p>
               </div>
-              
+
               <p className="text-gray-700">
-                At the core of our work is the belief that empowered girls can break cycles of poverty, violence, and exclusion—becoming agents of transformation in their families and communities.
+                At the core of our work is the belief that empowered girls can
+                break cycles of poverty, violence, and exclusion—becoming agents
+                of transformation in their families and communities.
               </p>
-              
+
               <Button
                 variant="primary"
-                onClick={() => document.getElementById('programs')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() =>
+                  document
+                    .getElementById("programs")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
               >
                 Explore Our Programs
               </Button>
             </div>
           </div>
-          
+
           <div className="order-1 md:order-2 relative">
             <div className="rounded-2xl overflow-hidden h-[400px] md:h-[500px] relative shadow-xl">
               <img
-                src="https://images.pexels.com/photos/9553905/pexels-photo-9553905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src={girlsLearningCode}
                 alt="Girls in educational program"
                 className="w-full h-full object-cover"
               />
