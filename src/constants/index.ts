@@ -10,6 +10,19 @@ import {
 import womenEmpowerment from "../assets/women-empowerment-4.jpeg";
 import digitalLiteracy from "../assets/girls-learning-2.jpg";
 
+// Team image imports
+import team1 from "../assets/ibrahim-yakub.jpeg";
+import team2 from "../assets/kareem-onivehu.jpeg";
+import team3 from "../assets/yemi-balogun.jpeg";
+import team4 from "../assets/emmanuel-yaba-abel.jpeg";
+import team5 from "../assets/joshua-toyin-mercy.jpeg";
+
+// Partners Image imports
+import partner1 from "../assets/ube-img.jpg";
+import Partner2 from "../assets/senior-citizens.jpeg";
+import partner3 from "../assets/oladele-john-niyi.jpeg";
+import partner4 from "../assets/partner5.jpeg";
+
 export const navLinks = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
@@ -72,32 +85,34 @@ export const values = [
 
 export const teamMembers = [
   {
-    name: "Jane Doe",
-    role: "Founder & Executive Director",
-    image:
-      "https://images.pexels.com/photos/3796217/pexels-photo-3796217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    bio: "Jane is passionate about creating opportunities for young women and has over 15 years of experience in the non-profit sector.",
+    name: "Ibrahim Danasebe Yakub ",
+    role: "Project Manager",
+    image: `${team1}`,
+    // bio: "Jane is passionate about creating opportunities for young women and has over 15 years of experience in the non-profit sector.",
   },
   {
-    name: "Sarah Johnson",
-    role: "Program Director",
-    image:
-      "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    name: "Kareem Onivehu Abdulraheem ",
+    role: "State Lead",
+    image: `${team2}`,
     bio: "Sarah leads our educational initiatives and brings expertise in curriculum development and program management.",
   },
   {
-    name: "Amina Yusuf",
-    role: "Community Outreach Manager",
-    image:
-      "https://images.pexels.com/photos/6000065/pexels-photo-6000065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    name: "Yemi Balogun",
+    role: "Communication Strategist",
+    image: `${team3}`,
     bio: "Amina works closely with local communities to ensure our programs reach those who need them most.",
   },
   {
-    name: "Grace Okonkwo",
-    role: "Finance Director",
-    image:
-      "https://images.pexels.com/photos/5905497/pexels-photo-5905497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    name: "Emmanuel Yaba Abel",
+    role: "Assistant Program manager",
+    image: `${team4}`,
     bio: "Grace ensures our resources are managed effectively to maximize our impact in communities.",
+  },
+  {
+    name: "Joshua Toyin Mercy",
+    role: "Legal Adviser",
+    image: `${team5}`,
+    bio: "Joshua Toyin is a legal expert who ensures our programs comply with local laws and regulations.",
   },
 ];
 
@@ -140,43 +155,44 @@ export const contactInfo = {
 
 export const partners = [
   {
-    name: "United Nations Women",
-    category: "International Organization",
-    logo: "https://images.pexels.com/photos/2422290/pexels-photo-2422290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    name: "Save Protect & Empower Foundation",
+    category: "Non-Profit Organization",
+    logo: `${partner1}`,
     description:
-      "Supporting gender equality and women's empowerment initiatives.",
+      "Our organization took significant strides in combating gender-based violence during the 16 Days of Activism. ",
   },
   {
-    name: "Nigerian Ministry of Education",
-    category: "Government",
-    logo: "https://images.pexels.com/photos/2982449/pexels-photo-2982449.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    name: "Peace and Reconciliation Initiative",
+    category: "Non-Profit Organization",
+    logo: `${Partner2}`,
     description: "Collaborating on educational programs and policy advocacy.",
   },
   {
-    name: "Global Education Fund",
+    name: "Oladele John Niyi Foundation",
     category: "Non-Profit Organization",
-    logo: "https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    description: "Providing funding and resources for educational initiatives.",
-  },
-  {
-    name: "Tech4Girls Initiative",
-    category: "Corporate Partner",
-    logo: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    description: "Supporting digital literacy and STEM education programs.",
-  },
-  {
-    name: "Women's Health Alliance",
-    category: "Healthcare Organization",
-    logo: "https://images.pexels.com/photos/3259629/pexels-photo-3259629.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    description: "Collaborating on health education and wellness programs.",
-  },
-  {
-    name: "Community Development Bank",
-    category: "Financial Institution",
-    logo: "https://images.pexels.com/photos/936722/pexels-photo-936722.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    logo: `${partner3}`,
     description:
       "Supporting financial literacy and economic empowerment initiatives.",
   },
+  {
+    name: "Woawoo  Card",
+    category: "Corporate Partner",
+    logo: `${partner4}`,
+    description: "Supporting digital literacy and STEM education programs.",
+  },
+  // {
+  //   name: "Women's Health Alliance",
+  //   category: "Healthcare Organization",
+  //   logo: "https://images.pexels.com/photos/3259629/pexels-photo-3259629.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  //   description: "Collaborating on health education and wellness programs.",
+  // },
+  // {
+  //   name: "Community Development Bank",
+  //   category: "Financial Institution",
+  //   logo: "https://images.pexels.com/photos/936722/pexels-photo-936722.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  //   description:
+  //     "Supporting financial literacy and economic empowerment initiatives.",
+  // },
 ];
 
 export const blogPosts = [

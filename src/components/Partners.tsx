@@ -1,7 +1,6 @@
-import React from 'react';
-import Container from './Container';
-import SectionTitle from './SectionTitle';
-import { partners } from '../constants';
+import Container from "./Container";
+import SectionTitle from "./SectionTitle";
+import { partners } from "../constants";
 
 const Partners = () => {
   return (
@@ -12,10 +11,10 @@ const Partners = () => {
           subtitle="We collaborate with organizations that share our vision of empowering girls and women across Nigeria."
           center
         />
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {partners.map((partner, index) => (
-            <div 
+            <div
               key={index}
               className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
             >
@@ -33,9 +32,7 @@ const Partners = () => {
                 <h3 className="text-xl font-serif font-bold text-gray-900 mb-3">
                   {partner.name}
                 </h3>
-                <p className="text-gray-700">
-                  {partner.description}
-                </p>
+                <p className="text-gray-700">{partner.description}</p>
               </div>
             </div>
           ))}
@@ -46,7 +43,10 @@ const Partners = () => {
             Become a Partner
           </h3>
           <p className="text-gray-700 max-w-2xl mx-auto mb-6">
-            Join us in our mission to empower girls and women across Nigeria. We welcome partnerships with organizations that share our commitment to creating positive change through education, mentorship, and community development.
+            Join us in our mission to empower girls and women across Nigeria. We
+            welcome partnerships with organizations that share our commitment to
+            creating positive change through education, mentorship, and
+            community development.
           </p>
           <a
             href="#contact"
