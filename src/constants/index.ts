@@ -16,12 +16,17 @@ import team2 from "../assets/kareem-onivehu.jpeg";
 import team3 from "../assets/yemi-balogun.jpeg";
 import team4 from "../assets/emmanuel-yaba-abel.jpeg";
 import team5 from "../assets/joshua-toyin-mercy.jpeg";
+import team6 from "../assets/opeyemi-ologun.jpeg";
 
 // Partners Image imports
-import partner1 from "../assets/ube-img.jpg";
-import Partner2 from "../assets/senior-citizens.jpeg";
 import partner3 from "../assets/oladele-john-niyi.jpeg";
 import partner4 from "../assets/partner5.jpeg";
+import partner6 from "../assets/partner6.jpeg";
+import partner7 from "../assets/partner7.jpeg";
+
+// Testimonials Image imports
+import testimonial1 from "../assets/team-and-student-2.jpeg";
+import testimonial2 from "../assets/testimonial2.jpg";
 
 export const navLinks = [
   { name: "Home", href: "#home" },
@@ -114,6 +119,12 @@ export const teamMembers = [
     image: `${team5}`,
     bio: "Joshua Toyin is a legal expert who ensures our programs comply with local laws and regulations.",
   },
+  {
+    name: "Opeyemi Ologun",
+    role: "Advocacy Coordinator/Campaign Manager",
+    image: `${team6}`,
+    bio: "Opeyemi coordinates our volunteer programs, ensuring a positive experience for all involved.",
+  },
 ];
 
 export const impactStats = [
@@ -126,17 +137,16 @@ export const impactStats = [
 export const testimonials = [
   {
     quote:
-      "The Bridge Inspire Foundation changed my life. Their mentorship program gave me the confidence to pursue my education and believe in myself.",
+      "The Bridge Inspire Foundation changed my life. Their mentorship program gave me schorlarship the confidence to pursue my education and believe in myself.",
     name: "Chioma N.",
-    role: "Program Beneficiary, Lagos",
-    image:
-      "https://images.pexels.com/photos/1139743/pexels-photo-1139743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    role: "Girls who were awarded scholarships, Lokoja",
+    image: `${testimonial1}`,
   },
   {
     quote:
       "Through the leadership training, I've learned skills that have helped me become a voice for change in my community. I'm now mentoring other young girls.",
-    name: "Fatima A.",
-    role: "Leadership Program Graduate",
+    name: "Mrs. Ayodeji",
+    role: "Beneficiary of the Free Digital Skills Empowerment Program in commemoration of the International Women's Day 2025",
     image:
       "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
@@ -144,7 +154,7 @@ export const testimonials = [
 
 export const contactInfo = {
   email: "bridgeinspirefoundation@gmail.com",
-  phone: "+234 XXX XXX XXXX",
+  phone: "+234 905 5331 113",
   address: "Abuja, Nigeria",
   social: {
     facebook: "The Bridge Inspire Foundation",
@@ -157,14 +167,14 @@ export const partners = [
   {
     name: "Save Protect & Empower Foundation",
     category: "Non-Profit Organization",
-    logo: `${partner1}`,
+    logo: `${partner7}`,
     description:
       "Our organization took significant strides in combating gender-based violence during the 16 Days of Activism. ",
   },
   {
     name: "Peace and Reconciliation Initiative",
     category: "Non-Profit Organization",
-    logo: `${Partner2}`,
+    logo: `${partner6}`,
     description: "Collaborating on educational programs and policy advocacy.",
   },
   {

@@ -22,7 +22,7 @@ const Partners = () => {
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div className="p-6">
@@ -32,7 +32,7 @@ const Partners = () => {
                 <h3 className="text-xl font-serif font-bold text-gray-900 mb-3">
                   {partner.name}
                 </h3>
-                <p className="text-gray-700">{partner.description}</p>
+                {/* <p className="text-gray-700">{partner.description}</p> */}
               </div>
             </div>
           ))}

@@ -22,7 +22,7 @@ const Team = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-contain object-center transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="p-6">
