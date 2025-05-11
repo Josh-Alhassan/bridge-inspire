@@ -160,7 +160,7 @@ export const impactStories = [
   {
     title: "Empowering Women through Digital Skills",
     name: "Mrs. Ayodeji Olupeka",
-    location: "Oyo, Nigeria",
+    location: "Nigeria",
     image: `${buildCapacity}`,
     story:
       "Aisha grew up in a community where girls were not encouraged to pursue education, let alone careers in technology. Through our Tech4Girls program, she discovered her passion for coding and digital design. Despite initial resistance from her family, our mentorship and support helped her persist. Today, she's completed her training and works as a junior web developer. Our program has empowered women to take control of their digital presence, improve their business operations, and reach new customers. By providing access to digital skills training and resources, we're helping to bridge the gap between women entrepreneurs and the digital economy.",
