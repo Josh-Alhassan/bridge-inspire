@@ -10,6 +10,7 @@ import Blog from "./components/Blog";
 import Donate from "./components/Donate";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import VideoTestimonials from "./components/VideoTestimonail";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Values />
         <Team />
         <Impact />
+        {/* <VideoTestimonials /> */}
         <Partners />
         <Blog />
         <Donate />

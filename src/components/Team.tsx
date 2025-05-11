@@ -8,7 +8,7 @@ const Team = () => {
       <Container>
         <SectionTitle
           title="Our Team"
-          subtitle="Meet the dedicated women leading our foundation and driving our mission forward."
+          subtitle="Meet the dedicated men and women leading our foundation and driving our mission forward."
           center
         />
 

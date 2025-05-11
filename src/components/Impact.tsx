@@ -1,11 +1,23 @@
+import React, { useState } from "react";
 import Container from "./Container";
 import SectionTitle from "./SectionTitle";
-import { impactStats, testimonials } from "../constants";
-import { Quote } from "lucide-react";
-
-import ubeImg from "../assets/ube-img-2.jpg";
+import Button from "./Button";
+import { impactStats, impactStories } from "../constants";
+import { ChevronRight, ChevronLeft, Quote } from "lucide-react";
 
 const Impact = () => {
+  const [currentStory, setCurrentStory] = useState(0);
+
+  const nextStory = () => {
+    setCurrentStory((prev) => (prev + 1) % impactStories.length);
+  };
+
+  const prevStory = () => {
+    setCurrentStory(
+      (prev) => (prev - 1 + impactStories.length) % impactStories.length
+    );
+  };
+
   return (
     <section id="impact" className="section-padding bg-gray-50">
       <Container>
@@ -31,95 +43,143 @@ const Impact = () => {
 
         <div className="mb-16">
           <h3 className="text-2xl font-serif font-bold text-gray-900 mb-8 text-center">
-            Success Stories
+            Impact Stories
           </h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg shadow-md p-8 relative"
-              >
-                <Quote
-                  size={40}
-                  className="text-primary-100 absolute top-6 right-6"
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-xl shadow-lg object-center overflow-hidden">
+              <div className="relative">
+                <img
+                  src={impactStories[currentStory].image}
+                  alt={impactStories[currentStory].title}
+                  className="w-full h-64 object-cover"
                 />
-                <p className="text-gray-700 mb-6 relative z-10">
-                  {testimonial.quote}
-                </p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-full h-full object-cover"
-                    />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <h4 className="text-white text-xl font-serif font-bold">
+                    {impactStories[currentStory].title}
+                  </h4>
+                  <p className="text-gray-200">
+                    {impactStories[currentStory].location}
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-8">
+                <div className="prose max-w-none">
+                  <p className="text-gray-700 mb-6 leading-relaxed">
+                    {impactStories[currentStory].story}
+                  </p>
+
+                  <div className="bg-primary-50 p-6 rounded-lg mb-6">
+                    <h5 className="font-serif font-bold text-gray-900 mb-3">
+                      Key Outcomes:
+                    </h5>
+                    <ul className="list-disc list-inside space-y-2">
+                      {impactStories[currentStory].outcomes.map(
+                        (outcome, index) => (
+                          <li key={index} className="text-gray-700">
+                            {outcome}
+                          </li>
+                        )
+                      )}
+                    </ul>
                   </div>
-                  <div>
-                    <p className="font-medium text-gray-900">
-                      {testimonial.name}
+
+                  <div className="bg-secondary-50 p-6 rounded-lg mb-6">
+                    <h5 className="font-serif font-bold text-gray-900 mb-3">
+                      What This Story Means to Us:
+                    </h5>
+                    <p className="text-gray-700">
+                      {impactStories[currentStory].meaning}
                     </p>
-                    <p className="text-sm text-gray-600">{testimonial.role}</p>
+                  </div>
+
+                  <div className="bg-accent-50 p-6 rounded-lg">
+                    <h5 className="font-serif font-bold text-gray-900 mb-3">
+                      How You Can Help:
+                    </h5>
+                    <p className="text-gray-700 mb-4">
+                      {impactStories[currentStory].callToAction}
+                    </p>
+                    <Button
+                      variant="accent"
+                      onClick={() =>
+                        document
+                          .getElementById("donate")
+                          ?.scrollIntoView({ behavior: "smooth" })
+                      }
+                    >
+                      Support Our Mission
+                    </Button>
                   </div>
                 </div>
               </div>
-            ))}
+            </div>
+
+            <div className="flex justify-between items-center mt-6">
+              <button
+                onClick={prevStory}
+                className="p-2 rounded-full bg-white shadow-md hover:bg-gray-50 transition-colors"
+              >
+                <ChevronLeft className="w-6 h-6 text-gray-600" />
+              </button>
+
+              <div className="flex gap-2">
+                {impactStories.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentStory(index)}
+                    className={`w-3 h-3 rounded-full transition-all ${
+                      index === currentStory
+                        ? "bg-primary-600 w-6"
+                        : "bg-gray-300 hover:bg-gray-400"
+                    }`}
+                  />
+                ))}
+              </div>
+
+              <button
+                onClick={nextStory}
+                className="p-2 rounded-full bg-white shadow-md hover:bg-gray-50 transition-colors"
+              >
+                <ChevronRight className="w-6 h-6 text-gray-600" />
+              </button>
+            </div>
           </div>
         </div>
 
-        <div className="bg-primary-50 rounded-lg p-8 md:p-12">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-2xl font-serif font-bold text-gray-900 mb-4">
-                Our Goals for 2025
-              </h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <span className="bg-primary-100 rounded-full p-1 mr-3 mt-1">
-                    <span className="block w-2 h-2 bg-primary-500 rounded-full"></span>
-                  </span>
-                  <span className="text-gray-700">
-                    Expand our programs to 5 additional states in Nigeria
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="bg-primary-100 rounded-full p-1 mr-3 mt-1">
-                    <span className="block w-2 h-2 bg-primary-500 rounded-full"></span>
-                  </span>
-                  <span className="text-gray-700">
-                    Launch a digital literacy initiative reaching 2,000 young
-                    women
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="bg-primary-100 rounded-full p-1 mr-3 mt-1">
-                    <span className="block w-2 h-2 bg-primary-500 rounded-full"></span>
-                  </span>
-                  <span className="text-gray-700">
-                    Establish 10 new community partnerships for sustainable
-                    development
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="bg-primary-100 rounded-full p-1 mr-3 mt-1">
-                    <span className="block w-2 h-2 bg-primary-500 rounded-full"></span>
-                  </span>
-                  <span className="text-gray-700">
-                    Create a scholarship fund for 100 exceptional young women
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <div className="relative h-72 md:h-80">
-              <div className="absolute inset-0 rounded-lg overflow-hidden">
-                <img
-                  src={ubeImg}
-                  alt="Girls in a classroom"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-primary-600 bg-opacity-20"></div>
+        <div className="grid md:grid-cols-2 gap-8">
+          {impactStories.slice(0, 2).map((testimonial, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-md p-8 relative"
+            >
+              <Quote
+                size={40}
+                className="text-primary-100 absolute top-6 right-6"
+              />
+              <p className="text-gray-700 mb-6 relative z-10">
+                {testimonial.quote}
+              </p>
+              <div className="flex items-center">
+                <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="font-medium text-gray-900">
+                    {testimonial.name}
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    {testimonial.location}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </Container>
     </section>

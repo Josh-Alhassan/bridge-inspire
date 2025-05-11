@@ -26,7 +26,9 @@ import partner7 from "../assets/partner7.jpeg";
 
 // Testimonials Image imports
 import testimonial1 from "../assets/team-and-student-2.jpeg";
-import testimonial2 from "../assets/testimonial2.jpg";
+import testimonial2 from "../assets/testimony-2.jpeg";
+import genderViolence from "../assets/gender-violence-2.jpeg";
+import buildCapacity from "../assets/building-capacity.jpg";
 
 export const navLinks = [
   { name: "Home", href: "#home" },
@@ -129,9 +131,73 @@ export const teamMembers = [
 
 export const impactStats = [
   { number: "5,000+", label: "Girls Educated" },
-  { number: "200+", label: "Community Programs" },
-  { number: "50+", label: "Partner Schools" },
-  { number: "20+", label: "Nigerian States Reached" },
+  { number: "8+", label: "Community Programs" },
+  { number: "20+", label: "Partners" },
+  { number: "13", label: "Nigerian States Reached" },
+];
+
+export const impactStories = [
+  {
+    title: "Hauwa's Journey to Healing",
+    name: "Hauwa",
+    location: "Kano State, Nigeria",
+    image: `${genderViolence}`,
+    story:
+      "On International Women's Day, March 8, 2025, The Bridge Inspire Foundation organized a free digital skills empowerment program for women in business and professionals looking to transition into the digital world. Our goal was to equip them with the tools and knowledge needed to thrive in today's digital landscape.",
+    outcomes: [
+      "Successful Cesarean operation",
+      "Ongoing medical care and support",
+      "Access to counseling services",
+      "Educational support for continued schooling",
+    ],
+    meaning:
+      "Hauwa's journey underscores the importance of our mission. We're dedicated to empowering girls and women, providing them with the support and resources they need to overcome adversity. Stories like Hauwa's fuel our passion to create lasting change.",
+    callToAction:
+      "Your support can make a tangible difference in the lives of girls like Hauwa. Help us provide medical care, counseling, and educational support to survivors of gender-based violence.",
+    quote:
+      "The foundation didn't just save my life; they gave me hope and a future. Now I want to help other girls who might be going through similar situations.",
+  },
+  {
+    title: "Empowering Women through Digital Skills",
+    name: "Mrs. Ayodeji Olupeka",
+    location: "Oyo, Nigeria",
+    image: `${buildCapacity}`,
+    story:
+      "Aisha grew up in a community where girls were not encouraged to pursue education, let alone careers in technology. Through our Tech4Girls program, she discovered her passion for coding and digital design. Despite initial resistance from her family, our mentorship and support helped her persist. Today, she's completed her training and works as a junior web developer. Our program has empowered women to take control of their digital presence, improve their business operations, and reach new customers. By providing access to digital skills training and resources, we're helping to bridge the gap between women entrepreneurs and the digital economy.",
+    outcomes: [
+      "123 women from across Nigeria registered for the program, showcasing the demand for digital skills training.",
+      "We offered training in essential digital skills, including: Google Business Profile optimization, Facebook Ads",
+      "Website design: Business Management, Data Analytics, Digital Marketing, ",
+      "To further support our participants, we provided: Free CAC (Corporate Affairs Commission) registration certificates to 4 business owners, enhancing their credibility and online presence, free e-commerce website design for 6 businesses, enabling them to reach a wider audience.",
+    ],
+    meaning:
+      "This initiative demonstrates our commitment to supporting women's economic empowerment and promoting digital inclusion. By equipping women with the skills and tools they need to succeed online, we are helping to create a more level playing field for women in business.",
+    callToAction:
+      "Your support can help us continue to provide digital skills training and resources to women entrepreneurs. Consider partnering with us.",
+    quote:
+      "Hello, Sis. The website is ready. The coach just dropped the link embuk-cake.surge.sh . Thank you so much to Bridge Inspire Foundation for this opportunity. I am so grateful. I am so happy to be a part of this program.",
+  },
+  // {
+  //   title: "Fatima's Educational Victory",
+  //   name: "Fatima",
+  //   location: "Kaduna State, Nigeria",
+  //   image:
+  //     "https://images.pexels.com/photos/5905905/pexels-photo-5905905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  //   story:
+  //     "Fatima was at risk of dropping out of school due to financial constraints. Her family couldn't afford her school fees, and she was expected to help with household duties. Through our scholarship program, we ensured she could continue her education. Not only did she complete secondary school, but she also earned a university scholarship.",
+  //   outcomes: [
+  //     "Completed secondary education with distinction",
+  //     "Secured university scholarship",
+  //     "Started a study group for younger girls",
+  //     "Family now advocates for girls' education",
+  //   ],
+  //   meaning:
+  //     "Fatima's achievement shows how removing financial barriers to education can transform not just one life, but influence entire communities. Her success has inspired other families to prioritize their daughters' education.",
+  //   callToAction:
+  //     "Support our scholarship program to help more girls like Fatima complete their education and achieve their dreams.",
+  //   quote:
+  //     "Education opened doors I never knew existed. Now I'm helping other girls see those same possibilities.",
+  // },
 ];
 
 export const testimonials = [
@@ -144,11 +210,46 @@ export const testimonials = [
   },
   {
     quote:
-      "Through the leadership training, I've learned skills that have helped me become a voice for change in my community. I'm now mentoring other young girls.",
-    name: "Mrs. Ayodeji",
+      "Hello, Sis. The website is ready. The coach just dropped the link embuk-cake.surge.sh . Thank you so much to Bridge Inspire Foundation for this opportunity. I am so grateful. I am so happy to be a part of this program.",
+    name: "Mrs. Ayodeji Olupeka",
     role: "Beneficiary of the Free Digital Skills Empowerment Program in commemoration of the International Women's Day 2025",
-    image:
-      "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: `${testimonial2}`,
+  },
+];
+
+export const videoTestimonials = [
+  {
+    id: 1,
+    name: "Aisha Mohammed",
+    role: "Tech Skills Program Graduate",
+    quote:
+      "The digital literacy program opened up a whole new world of opportunities for me. Now I'm working as a web developer and mentoring other girls in my community.",
+    videoUrl:
+      "https://player.vimeo.com/progressive_redirect/playback/735428933/rendition/720p/file.mp4?loc=external",
+    thumbnail:
+      "https://images.pexels.com/photos/7433822/pexels-photo-7433822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: 2,
+    name: "Blessing Okafor",
+    role: "Scholarship Recipient",
+    quote:
+      "Thanks to the Bridge Inspire Foundation's scholarship, I was able to complete my education. Today, I'm a qualified teacher giving back to my community.",
+    videoUrl:
+      "https://player.vimeo.com/progressive_redirect/playback/735428899/rendition/720p/file.mp4?loc=external",
+    thumbnail:
+      "https://images.pexels.com/photos/5905905/pexels-photo-5905905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: 3,
+    name: "Halima Ibrahim",
+    role: "Leadership Program Participant",
+    quote:
+      "The leadership training transformed not just my life, but the lives of many girls in my community. We're now leading initiatives for positive change.",
+    videoUrl:
+      "https://player.vimeo.com/progressive_redirect/playback/735428862/rendition/720p/file.mp4?loc=external",
+    thumbnail:
+      "https://images.pexels.com/photos/5905445/pexels-photo-5905445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
 ];
 
