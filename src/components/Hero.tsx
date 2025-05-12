@@ -8,8 +8,22 @@ import imgIndex2 from "../assets/let-her-shine-audeince.jpeg";
 import imgIndex3 from "../assets/humaniterian-rights.jpg";
 import kqGirls from "../assets/kq-girls.jpeg";
 import teensForum from "../assets/teens-forum.jpg";
+import imgIndex4 from "../assets/sec-school-girls.jpeg";
+import imgIndex5 from "../assets/women_at_akk.jpeg";
+import imgIndex6 from "../assets/christmas_miracle.jpeg";
+import imgIndex7 from "../assets/kogi-girl-tech.jpeg";
 
-const heroImages = [imgIndex1, imgIndex2, imgIndex3, kqGirls, teensForum];
+const heroImages = [
+  imgIndex1,
+  imgIndex2,
+  imgIndex3,
+  kqGirls,
+  teensForum,
+  imgIndex4,
+  imgIndex5,
+  imgIndex6,
+  imgIndex7,
+];
 
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
