@@ -7,15 +7,39 @@ import { ChevronRight, ChevronLeft, Quote } from "lucide-react";
 
 const Impact = () => {
   const [currentStory, setCurrentStory] = useState(0);
+  const [currentImage, setCurrentImage] = useState(0);
 
   const nextStory = () => {
     setCurrentStory((prev) => (prev + 1) % impactStories.length);
+    setCurrentImage(0);
   };
 
   const prevStory = () => {
     setCurrentStory(
       (prev) => (prev - 1 + impactStories.length) % impactStories.length
     );
+    setCurrentImage(0);
+  };
+
+  const story = impactStories[currentStory];
+  const hasAdditionalImages =
+    story.additionalImages && story.additionalImages.length > 0;
+
+  const nextImage = () => {
+    if (!hasAdditionalImages) return;
+    const totalImages = story.additionalImages.length + 1;
+    setCurrentImage((prev) => (prev + 1) % totalImages);
+  };
+
+  const prevImage = () => {
+    if (!hasAdditionalImages) return;
+    const totalImages = story.additionalImages.length + 1;
+    setCurrentImage((prev) => (prev - 1 + totalImages) % totalImages);
+  };
+
+  const getCurrentImage = () => {
+    if (currentImage === 0) return story.image;
+    return story.additionalImages?.[currentImage - 1] || story.image;
   };
 
   return (
@@ -46,28 +70,44 @@ const Impact = () => {
             Impact Stories
           </h3>
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-xl shadow-lg object-center overflow-hidden">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="relative">
                 <img
-                  src={impactStories[currentStory].image}
-                  alt={impactStories[currentStory].title}
-                  className="w-full h-64 object-cover"
+                  src={getCurrentImage()}
+                  alt={story.title}
+                  className="w-full h-80 object-contain"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+
+                {hasAdditionalImages && (
+                  <>
+                    <button
+                      onClick={prevImage}
+                      className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 shadow-md hover:bg-white transition-colors"
+                    >
+                      <ChevronLeft className="w-6 h-6 text-gray-600" />
+                    </button>
+                    <button
+                      onClick={nextImage}
+                      className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 shadow-md hover:bg-white transition-colors"
+                    >
+                      <ChevronRight className="w-6 h-6 text-gray-600" />
+                    </button>
+                  </>
+                )}
+
                 <div className="absolute bottom-4 left-4 right-4">
                   <h4 className="text-white text-xl font-serif font-bold">
-                    {impactStories[currentStory].title}
+                    {story.title}
                   </h4>
-                  <p className="text-gray-200">
-                    {impactStories[currentStory].location}
-                  </p>
+                  <p className="text-gray-200">{story.location}</p>
                 </div>
               </div>
 
               <div className="p-8">
                 <div className="prose max-w-none">
                   <p className="text-gray-700 mb-6 leading-relaxed">
-                    {impactStories[currentStory].story}
+                    {story.story}
                   </p>
 
                   <div className="bg-primary-50 p-6 rounded-lg mb-6">
@@ -75,13 +115,11 @@ const Impact = () => {
                       Key Outcomes:
                     </h5>
                     <ul className="list-disc list-inside space-y-2">
-                      {impactStories[currentStory].outcomes.map(
-                        (outcome, index) => (
-                          <li key={index} className="text-gray-700">
-                            {outcome}
-                          </li>
-                        )
-                      )}
+                      {story.outcomes.map((outcome, index) => (
+                        <li key={index} className="text-gray-700">
+                          {outcome}
+                        </li>
+                      ))}
                     </ul>
                   </div>
 
@@ -89,18 +127,14 @@ const Impact = () => {
                     <h5 className="font-serif font-bold text-gray-900 mb-3">
                       What This Story Means to Us:
                     </h5>
-                    <p className="text-gray-700">
-                      {impactStories[currentStory].meaning}
-                    </p>
+                    <p className="text-gray-700">{story.meaning}</p>
                   </div>
 
                   <div className="bg-accent-50 p-6 rounded-lg">
                     <h5 className="font-serif font-bold text-gray-900 mb-3">
                       How You Can Help:
                     </h5>
-                    <p className="text-gray-700 mb-4">
-                      {impactStories[currentStory].callToAction}
-                    </p>
+                    <p className="text-gray-700 mb-4">{story.callToAction}</p>
                     <Button
                       variant="accent"
                       onClick={() =>
@@ -128,7 +162,10 @@ const Impact = () => {
                 {impactStories.map((_, index) => (
                   <button
                     key={index}
-                    onClick={() => setCurrentStory(index)}
+                    onClick={() => {
+                      setCurrentStory(index);
+                      setCurrentImage(0);
+                    }}
                     className={`w-3 h-3 rounded-full transition-all ${
                       index === currentStory
                         ? "bg-primary-600 w-6"

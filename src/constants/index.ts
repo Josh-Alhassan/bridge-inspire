@@ -29,6 +29,14 @@ import testimonial1 from "../assets/team-and-student-2.jpeg";
 import testimonial2 from "../assets/testimony-2.jpeg";
 import genderViolence from "../assets/gender-violence-2.jpeg";
 import buildCapacity from "../assets/building-capacity.jpg";
+import digitalSkills from "../assets/digital_skill_inpire.jpeg";
+import christmasMiracle from "../assets/christmas_miracle.jpeg";
+import christmasMiracle2 from "../assets/christmas_miracle-2.jpeg";
+import christmasMiracle3 from "../assets/christmas_miracle-3.jpeg";
+import christmasMiracle4 from "../assets/christmas_miracle-4.jpeg";
+import empowerGirls from "../assets/empowering-girls.jpeg";
+import empowerGirls2 from "../assets/sec-school-girls.jpeg";
+import empowerGirls3 from "../assets/kogi-girl-tech.jpeg";
 
 export const navLinks = [
   { name: "Home", href: "#home" },
@@ -130,7 +138,7 @@ export const teamMembers = [
 ];
 
 export const impactStats = [
-  { number: "5,000+", label: "Girls Educated" },
+  { number: "1,000+", label: "Girls Educated" },
   { number: "8+", label: "Community Programs" },
   { number: "20+", label: "Partners" },
   { number: "13", label: "Nigerian States Reached" },
@@ -177,27 +185,59 @@ export const impactStories = [
     quote:
       "Hello, Sis. The website is ready. The coach just dropped the link embuk-cake.surge.sh . Thank you so much to Bridge Inspire Foundation for this opportunity. I am so grateful. I am so happy to be a part of this program.",
   },
-  // {
-  //   title: "Fatima's Educational Victory",
-  //   name: "Fatima",
-  //   location: "Kaduna State, Nigeria",
-  //   image:
-  //     "https://images.pexels.com/photos/5905905/pexels-photo-5905905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  //   story:
-  //     "Fatima was at risk of dropping out of school due to financial constraints. Her family couldn't afford her school fees, and she was expected to help with household duties. Through our scholarship program, we ensured she could continue her education. Not only did she complete secondary school, but she also earned a university scholarship.",
-  //   outcomes: [
-  //     "Completed secondary education with distinction",
-  //     "Secured university scholarship",
-  //     "Started a study group for younger girls",
-  //     "Family now advocates for girls' education",
-  //   ],
-  //   meaning:
-  //     "Fatima's achievement shows how removing financial barriers to education can transform not just one life, but influence entire communities. Her success has inspired other families to prioritize their daughters' education.",
-  //   callToAction:
-  //     "Support our scholarship program to help more girls like Fatima complete their education and achieve their dreams.",
-  //   quote:
-  //     "Education opened doors I never knew existed. Now I'm helping other girls see those same possibilities.",
-  // },
+  {
+    title: "Empowering Girls in the Digital Age",
+    // name: "Fatima",
+    location: "Kogi State, Nigeria",
+    image: `${digitalSkills}`,
+    story:
+      "Through our collaboration with The Heritage and Legacy Foundation, we have equipped over 200 secondary school girls with essential digital skills, bridging the gender digital divide and fostering innovators. Our joint initiative provides digital literacy training, preparing them for the digital era and unlocking tech career opportunities.",
+    outcomes: [
+      "Digital Skills Training: Provided foundational digital skills, including computer basics and digital communication tools.",
+      "Empowering Young Women: Equipped girls with confidence and skills for tech careers.",
+      "- Bridging the Gap: Contributed to reducing the gender digital divide.",
+      "Family now advocates for girls' education",
+    ],
+    meaning:
+      "Our digital literacy program demonstrates how targeted education can bridge the gender digital divide and create new opportunities for young women in technology.",
+    callToAction:
+      "Support our digital literacy initiatives to help more girls access technology education and career opportunities.",
+    additionalImages: [
+      `${empowerGirls}`,
+      `${empowerGirls2}`,
+      `${empowerGirls3}`,
+      ,
+    ],
+    // quote:
+    //   "Education opened doors I never knew existed. Now I'm helping other girls see those same possibilities.",
+  },
+
+  {
+    title: "Christmas Miracle Project",
+    // name: "Fatima",
+    location: "Kogi State, Nigeria",
+    image: `${digitalSkills}`,
+    story:
+      "During the COVID-19 pandemic, we launched the Christmas Miracle project to bring joy and support to vulnerable families who couldn't afford a Christmas meal. We provided food baskets to 16 families, including widows, widowers, and single parents. This initiative not only alleviated hunger but also fostered a sense of community and togetherness during challenging times. We believe that even small acts of kindness can make a significant impact on people's lives.",
+    outcomes: [
+      "16 families received baskets containing essential items like: 5kg of rice, Vegetable oil, Juice, Pack of Maggi ,Cookies",
+      " Widows, widowers, and single parents benefited from the initiative",
+      "Our project demonstrated the power of community support during challenging times",
+      "Family now advocates for girls' education",
+    ],
+    meaning:
+      "The Christmas Miracle project highlights the importance of community support and kindness, especially during difficult times. By providing essential items, we helped families enjoy a festive season despite financial challenges.",
+    callToAction:
+      "Help us continue bringing hope and support to vulnerable families through our community initiatives.",
+    quote:
+      "The food basket meant more than just a meal - it showed us that someone cares.",
+    additionalImages: [
+      `${christmasMiracle}`,
+      `${christmasMiracle2}`,
+      `${christmasMiracle3}`,
+      `${christmasMiracle4}`,
+    ],
+  },
 ];
 
 export const testimonials = [
